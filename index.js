@@ -26,7 +26,7 @@ client.on("message" , message => {
         .setColor('#14ee9c')
         .setDescription('```Voici la liste de commande```')
         .setField('*help' , 'pour savoir les commandes')
-        message.reply(TestEmbed)
+        message.channel.send(TestEmbed)
         console.log("Le help à été demander")
     }
 });

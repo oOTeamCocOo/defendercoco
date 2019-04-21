@@ -84,7 +84,7 @@ client.on("message" , message => {
 });
 
 client.on("message" , message (function) {
-if (message.content === '!server') {
+if (message.content === '*server') {
   let server.name = message.guild.name
   let server_size = message.guild.members.size
   message.channel.send('Server : ' + server_name + '\nNombre de personne : ' + server_size)

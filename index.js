@@ -22,7 +22,11 @@ client.on("message" , message => {
 
 client.on("message" , message => {
     if(message.content === "*help"){
-        message.reply("```voici la liste de commande:```               ```*help``` (pour savoir les commandes) ; ```*aie``` (pour faire intervenir un agent de protection) ; ```*blacklist``` (pour voire les personnes malveillantes de discord) ; ```*securise``` (pour bloquer votre serveur contre les incidents en cours) ; ```*invite``` (pour obtenir le lien d'invitation) ; ```*info``` (pour obtenir l'info du jour)");
+        let TestEmbed = new.DiscordRichEmbed()
+        .setColor('#14ee9c')
+        .setDescription('```Voici la liste de commande```')
+        .setField('*help' , 'pour savoir les commandes')
+        message.reply(TestEmbed)
         console.log("Le help à été demander")
     }
 });

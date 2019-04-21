@@ -1,12 +1,16 @@
+    
 {
-  "name": "discorddefender",
+  "name": "C6C6 Defender",
   "version": "1.0.0",
-  "description": "bot defender security anti spam, raid, ddos",
+  "description": "DiscordBot",
   "main": "index.js",
+  "engines": { "node": "8.15.1"},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "author": "oOTeamCocOo",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.4.2"

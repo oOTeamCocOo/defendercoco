@@ -22,15 +22,29 @@ client.on("message" , message => {
 
 client.on("message" , message => {
     if(message.content === "*help"){
-        let TestEmbed = new.DiscordRichEmbed()
-        .setColor('#14ee9c')
-        .setDescription('```Voici la liste de commande```')
-        .setField('*help' , 'pour savoir les commandes')
-        message.channel.send(TestEmbed)
-        console.log("Le help à été demander")
-    }
-});
-
+        msg.channel.send({embed: {
+      color: 3447003,
+      author: {
+        name: msg.author.username,
+        icon_url: msg.author.avatarURL
+      },
+      title: 'LES COMMANDES',
+      description: 'VOICI QUELQUES COMMANDES',
+      fields: [
+        {
+          name: "*help",
+          value: "pour savoir les commandes"
+          
+       
+        }
+      ],
+      timestamp: new Date(),
+      footer:{
+        text: ''
+      }
+   
+            
+})
 client.on("message" , message => {
     if(message.content === "*blacklist"){
         message.reply(" ```Voici les gens possédant des idées noire:``` @.......#0000 ; @.......#0000 ....");

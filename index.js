@@ -12,6 +12,14 @@ client.on('ready', () => {
 client.login(process.env.TOKEN);
 
 
+client.on("message" , message => {
+    if(message.content === "*help"){
+        message.reply("```voici la liste de commande:```               ```*help``` (pour savoir les commandes) ; ```*aie``` (pour faire intervenir un agent de protection) ; ```*blacklist``` (pour voire les personnes malveillantes de discord) ; ```*securise``` (pour bloquer votre serveur contre les incidents en cours) ; ```*invite``` (pour obtenir le lien d'invitation) ; ```*info``` (pour obtenir l'info du jour)");
+        console.log("Le help à été demander")
+    }
+});
+
+
 
 client.on("message" , message => {
     if(message.content === "*aie"){
@@ -20,31 +28,6 @@ client.on("message" , message => {
     }
 });
 
-client.on("message" , message => {
-    if(message.content === "*help"){
-        msg.channel.send({embed: {
-      color: 3447003,
-      author: {
-        name: msg.author.username,
-        icon_url: msg.author.avatarURL
-      },
-      title: 'LES COMMANDES',
-      description: 'VOICI QUELQUES COMMANDES',
-      fields: [
-        {
-          name: "*help",
-          value: "pour savoir les commandes"
-          
-       
-        }
-      ],
-      timestamp: new Date(),
-      footer:{
-        text: ''
-      }
-   
-            
-})
 client.on("message" , message => {
     if(message.content === "*blacklist"){
         message.reply(" ```Voici les gens possédant des idées noire:``` @.......#0000 ; @.......#0000 ....");

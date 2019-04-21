@@ -6,7 +6,7 @@ var prefix = "*";
 
 client.on('ready', () => {
     console.log('logged in as ' + client.user.tag)
-    client.user.setActivity('la sécurité de ton serveur',{type: 'WATCHING'})
+    client.user.setActivity('la sécurité de ton serveur',{type: 'STREAMING'})
 });
 
 client.login(process.env.TOKEN);
@@ -82,3 +82,5 @@ client.on("message" , message => {
         console.log("Un utilisateur à demander l'info")
     }
 });
+
+

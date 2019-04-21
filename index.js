@@ -9,7 +9,7 @@ client.on('ready', () => {
     client.user.setActivity('la sécurité de ton serveur',{type: 'WATCHING'})
 });
 
-bot.login(process.env.TOKEN);
+client.login(process.env.TOKEN);
 
 
 
